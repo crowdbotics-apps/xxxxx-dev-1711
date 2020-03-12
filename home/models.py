@@ -25,16 +25,16 @@ class HomePage(models.Model):
     body = models.TextField()
     r1 = models.ForeignKey(
         "home.CustomText",
-        on_delete=models.CASCADE,
         null=True,
         blank=True,
+        on_delete=models.CASCADE,
         related_name="homepage_r1",
     )
     r2 = models.ForeignKey(
         "users.User",
-        on_delete=models.CASCADE,
         null=True,
         blank=True,
+        on_delete=models.CASCADE,
         related_name="homepage_r2",
     )
 
@@ -45,3 +45,8 @@ class HomePage(models.Model):
     @property
     def field(self):
         return "body"
+
+
+class R123(models.Model):
+    "Generated Model"
+    dede = models.BigIntegerField()
